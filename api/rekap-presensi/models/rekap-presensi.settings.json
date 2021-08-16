@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "rekap_presensis",
+  "info": {
+    "name": "presensi",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nama_peserta": {
+      "type": "string"
+    },
+    "unit_kerja": {
+      "type": "string"
+    },
+    "rapat": {
+      "model": "rapat",
+      "via": "presenses"
+    },
+    "signature_url": {
+      "type": "text"
+    }
+  }
+}

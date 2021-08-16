@@ -1,0 +1,78 @@
+{
+  "kind": "collectionType",
+  "collectionName": "rapats",
+  "info": {
+    "name": "rapat",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nama": {
+      "type": "string",
+      "required": false
+    },
+    "pimpinan": {
+      "type": "string"
+    },
+    "jenis": {
+      "type": "enumeration",
+      "enum": [
+        "online",
+        "offline"
+      ]
+    },
+    "tempat": {
+      "type": "string",
+      "required": false
+    },
+    "deskripsi_peserta": {
+      "type": "string"
+    },
+    "deskripsi_pembahasan": {
+      "type": "string"
+    },
+    "file_risalah": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "file_bahan": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "user": {
+      "via": "rapats",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "tanggal_jadwal": {
+      "type": "string"
+    },
+    "waktu_jadwal": {
+      "type": "string"
+    },
+    "slug_rapat": {
+      "type": "string"
+    },
+    "presenses": {
+      "via": "rapat",
+      "collection": "rekap-presensi"
+    }
+  }
+}

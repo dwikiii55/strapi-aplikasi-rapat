@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/rekap-presensis",
+      "handler": "rekap-presensi.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/rekap-presensis/count",
+      "handler": "rekap-presensi.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/rekap-presensis/:id",
+      "handler": "rekap-presensi.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/rekap-presensis",
+      "handler": "rekap-presensi.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/rekap-presensis/:id",
+      "handler": "rekap-presensi.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/rekap-presensis/:id",
+      "handler": "rekap-presensi.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
