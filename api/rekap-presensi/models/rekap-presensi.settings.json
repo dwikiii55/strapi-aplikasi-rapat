@@ -19,8 +19,8 @@
       "type": "string"
     },
     "rapat": {
-      "model": "rapat",
-      "via": "presenses"
+      "via": "presenses",
+      "model": "rapat"
     },
     "signature_url": {
       "type": "text"

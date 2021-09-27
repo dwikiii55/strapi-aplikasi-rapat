@@ -30,10 +30,7 @@
       "type": "string",
       "required": false
     },
-    "deskripsi_peserta": {
-      "type": "string"
-    },
-    "deskripsi_pembahasan": {
+    "agenda_rapat": {
       "type": "string"
     },
     "file_risalah": {
@@ -61,18 +58,30 @@
       "plugin": "users-permissions",
       "model": "user"
     },
-    "tanggal_jadwal": {
-      "type": "string"
-    },
-    "waktu_jadwal": {
-      "type": "string"
-    },
     "slug_rapat": {
       "type": "string"
     },
     "presenses": {
       "via": "rapat",
       "collection": "rekap-presensi"
+    },
+    "jadwal_rapat": {
+      "type": "datetime"
+    },
+    "file_dokumentasi": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "unit": {
+      "type": "string"
     }
   }
 }

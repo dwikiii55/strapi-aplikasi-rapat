@@ -62,6 +62,9 @@
     "rapats": {
       "via": "user",
       "collection": "rapat"
+    },
+    "nama": {
+      "type": "string"
     }
   }
 }
